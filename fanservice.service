@@ -1,0 +1,13 @@
+[Unit]
+Description=Fan control service
+
+[Service]
+ExecStart=/usr/bin/python3 -u fanctl.py
+WorkingDirectory=/home/pi/fan_service
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
